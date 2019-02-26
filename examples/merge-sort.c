@@ -99,6 +99,8 @@ static void list_split(struct list_head *head)
     list_split(right);
     list_merge(left, right);
 
+    free(left);
+
 #ifdef DEBUG
     puts("##### Merge result #####");
     struct listitem *item = NULL;
